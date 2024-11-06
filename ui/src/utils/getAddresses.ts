@@ -1,4 +1,4 @@
-import * as addressBook from '../../../src/ts/AaveAddressBook';
+import * as addressBook from '../../../src/ts/AddressBook';
 import { isAddress, Address, zeroAddress } from 'viem';
 
 export type ListItem = {

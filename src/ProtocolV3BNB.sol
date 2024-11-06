@@ -4,7 +4,7 @@ pragma solidity >=0.6.0;
 
 import {IPoolAddressesProvider, IPool, IPoolConfigurator, IAaveOracle, IPoolDataProvider, IACLManager} from './ProtocolV3.sol';
 import {ICollector} from './common/ICollector.sol';
-library AaveV3BNB {
+library ProtocolV3BNB {
   // https://bscscan.com/address/0xff75B6da14FfbbfD355Daf7a2731456b3562Ba6D
   IPoolAddressesProvider internal constant POOL_ADDRESSES_PROVIDER =
     IPoolAddressesProvider(0xff75B6da14FfbbfD355Daf7a2731456b3562Ba6D);
@@ -97,7 +97,7 @@ library AaveV3BNB {
   // https://bscscan.com/address/0x326aB0868bD279382Be2DF5E228Cb8AF38649AB4
   address internal constant STATIC_A_TOKEN_FACTORY = 0x326aB0868bD279382Be2DF5E228Cb8AF38649AB4;
 }
-library AaveV3BNBAssets {
+library ProtocolV3BNBAssets {
   // https://bscscan.com/address/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82
   address internal constant Cake_UNDERLYING = 0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82;
 
@@ -262,12 +262,12 @@ library AaveV3BNBAssets {
   address internal constant wstETH_INTEREST_RATE_STRATEGY =
     0x86AB1C62A8bf868E1b3E1ab87d587Aba6fbCbDC5;
 }
-library AaveV3BNBEModes {
+library ProtocolV3BNBEModes {
   uint8 internal constant NONE = 0;
 
   uint8 internal constant ETH_CORRELATED = 1;
 }
-library AaveV3BNBExternalLibraries {
+library ProtocolV3BNBExternalLibraries {
   // https://bscscan.com/address/0xb32381feFFF45eE9F47fD2f2cF83C832637d6EF0
   address internal constant FLASHLOAN_LOGIC = 0xb32381feFFF45eE9F47fD2f2cF83C832637d6EF0;
 

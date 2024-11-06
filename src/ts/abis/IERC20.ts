@@ -34,7 +34,7 @@ export const IERC20_ABI = [
         internalType: 'address',
       },
       {
-        name: 'amount',
+        name: 'value',
         type: 'uint256',
         internalType: 'uint256',
       },
@@ -85,12 +85,12 @@ export const IERC20_ABI = [
     name: 'transfer',
     inputs: [
       {
-        name: 'recipient',
+        name: 'to',
         type: 'address',
         internalType: 'address',
       },
       {
-        name: 'amount',
+        name: 'value',
         type: 'uint256',
         internalType: 'uint256',
       },
@@ -109,17 +109,17 @@ export const IERC20_ABI = [
     name: 'transferFrom',
     inputs: [
       {
-        name: 'sender',
+        name: 'from',
         type: 'address',
         internalType: 'address',
       },
       {
-        name: 'recipient',
+        name: 'to',
         type: 'address',
         internalType: 'address',
       },
       {
-        name: 'amount',
+        name: 'value',
         type: 'uint256',
         internalType: 'uint256',
       },

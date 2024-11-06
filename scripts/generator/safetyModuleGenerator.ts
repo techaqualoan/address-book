@@ -19,10 +19,10 @@ export const SAFETY_MODULE = {
 } as const;
 
 export function generateSafetyModule() {
-  const name = 'AaveSafetyModule';
+  const name = 'ProtocolSafetyModule';
 
   fs.writeFileSync(
-    `./src/AaveSafetyModule.sol`,
+    `./src/ProtocolSafetyModule.sol`,
     prefixWithGeneratedWarning(
       prefixWithPragma(
         wrapIntoSolidityLibrary(
@@ -34,7 +34,7 @@ export function generateSafetyModule() {
   );
 
   fs.writeFileSync(
-    `./src/ts/AaveSafetyModule.ts`,
+    `./src/ts/ProtocolSafetyModule.ts`,
     prefixWithGeneratedWarning(
       generateJsConstants({
         chainId: ChainId.mainnet,

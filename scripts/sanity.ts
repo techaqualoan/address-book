@@ -1,7 +1,7 @@
 /**
  * Runs sanity checks over the given set of addresses
  */
-import * as addressBook from '../src/ts/AaveAddressBook';
+import * as addressBook from '../src/ts/AddressBook';
 import {check as stataCheck} from './checks/stataFactory';
 import {check as wethCheck} from './checks/wethGateway';
 import {check as configEngineCheck} from './checks/configEngine';
