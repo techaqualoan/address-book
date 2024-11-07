@@ -10,7 +10,7 @@ cache/
 
 node_modules/
 
-dist/
+#dist/
 
 .DS_STORE
 .vercel
