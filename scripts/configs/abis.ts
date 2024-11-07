@@ -1,4 +1,3 @@
-import { RISK_STEWARD } from './../../src/ts/AaveV3Avalanche';
 import {governanceConfigMainnet} from './governance/ethereum';
 import {mainnetProtoV3Pool} from './pools/ethereum';
 

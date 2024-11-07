@@ -2,8 +2,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.6.0;
 
-import {AaveV3Sepolia} from './AaveV3Sepolia.sol';
-import {AaveV3BNB} from './AaveV3BNB.sol';
+import {ProtocolV3Sepolia} from './ProtocolV3Sepolia.sol';
+import {ProtocolV3BNB} from './ProtocolV3BNB.sol';
 import {MiscBNB} from './MiscBNB.sol';
 import {MiscSepolia} from './MiscSepolia.sol';
 import {ProtocolSafetyModule} from './ProtocolSafetyModule.sol';
