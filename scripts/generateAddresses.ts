@@ -26,12 +26,12 @@ async function main() {
   }
 
   // generate files
-  // const governanceNames = await Promise.all(
-  //   [
-  //     governanceConfigSepolia,
-  //     governanceConfigBNB,
-  //   ].map((config) => generateGovernanceLibrary(config)),
-  // );
+  const governanceNames = await Promise.all(
+    [
+      governanceConfigSepolia,
+      governanceConfigBNB,
+    ].map((config) => generateGovernanceLibrary(config)),
+  );
 
   const v3LibraryNames = await Promise.all(
     [
@@ -55,7 +55,7 @@ async function main() {
   writeFileSync('./src/ts/abis/index.ts', abis.join('\n'));
 
   const imports = [
-    // governanceNames,
+    governanceNames,
     v3LibraryNames,
     networkAddresses,
     smImports,

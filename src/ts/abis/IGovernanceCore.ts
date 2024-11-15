@@ -923,21 +923,9 @@ export const IGovernanceCore_ABI = [
       },
       {
         name: 'votingAssetsWithSlot',
-        type: 'tuple[]',
+        type: 'address[]',
         indexed: false,
-        internalType: 'struct IVotingMachineWithProofs.VotingAssetWithSlot[]',
-        components: [
-          {
-            name: 'underlyingAsset',
-            type: 'address',
-            internalType: 'address',
-          },
-          {
-            name: 'slot',
-            type: 'uint128',
-            internalType: 'uint128',
-          },
-        ],
+        internalType: 'address[]',
       },
     ],
     anonymous: false,

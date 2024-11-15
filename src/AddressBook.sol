@@ -2,6 +2,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.6.0;
 
+import {GovernanceV3Sepolia} from './GovernanceV3Sepolia.sol';
+import {GovernanceV3BNB} from './GovernanceV3BNB.sol';
 import {ProtocolV3Sepolia} from './ProtocolV3Sepolia.sol';
 import {ProtocolV3BNB} from './ProtocolV3BNB.sol';
 import {MiscBNB} from './MiscBNB.sol';

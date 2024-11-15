@@ -1,31 +1,21 @@
 declare const IVotingMachineWithProofs_ABI: readonly [{
     readonly type: "function";
-    readonly name: "DATA_WAREHOUSE";
+    readonly name: "BLOCKS_TO_FINALITY";
     readonly inputs: readonly [];
     readonly outputs: readonly [{
         readonly name: "";
-        readonly type: "address";
-        readonly internalType: "contract IDataWarehouse";
+        readonly type: "uint256";
+        readonly internalType: "uint256";
     }];
     readonly stateMutability: "view";
 }, {
     readonly type: "function";
-    readonly name: "DOMAIN_SEPARATOR";
+    readonly name: "DOMAIN_TYPEHASH";
     readonly inputs: readonly [];
     readonly outputs: readonly [{
         readonly name: "";
         readonly type: "bytes32";
         readonly internalType: "bytes32";
-    }];
-    readonly stateMutability: "view";
-}, {
-    readonly type: "function";
-    readonly name: "GOVERNANCE";
-    readonly inputs: readonly [];
-    readonly outputs: readonly [{
-        readonly name: "";
-        readonly type: "address";
-        readonly internalType: "address";
     }];
     readonly stateMutability: "view";
 }, {
@@ -40,62 +30,12 @@ declare const IVotingMachineWithProofs_ABI: readonly [{
     readonly stateMutability: "view";
 }, {
     readonly type: "function";
-    readonly name: "REPRESENTATIVES_SLOT";
-    readonly inputs: readonly [];
-    readonly outputs: readonly [{
-        readonly name: "";
-        readonly type: "uint256";
-        readonly internalType: "uint256";
-    }];
-    readonly stateMutability: "view";
-}, {
-    readonly type: "function";
-    readonly name: "VOTE_SUBMITTED_BY_REPRESENTATIVE_TYPEHASH";
-    readonly inputs: readonly [];
-    readonly outputs: readonly [{
-        readonly name: "";
-        readonly type: "bytes32";
-        readonly internalType: "bytes32";
-    }];
-    readonly stateMutability: "view";
-}, {
-    readonly type: "function";
     readonly name: "VOTE_SUBMITTED_TYPEHASH";
     readonly inputs: readonly [];
     readonly outputs: readonly [{
         readonly name: "";
         readonly type: "bytes32";
         readonly internalType: "bytes32";
-    }];
-    readonly stateMutability: "view";
-}, {
-    readonly type: "function";
-    readonly name: "VOTING_ASSET_WITH_SLOT_RAW";
-    readonly inputs: readonly [];
-    readonly outputs: readonly [{
-        readonly name: "";
-        readonly type: "string";
-        readonly internalType: "string";
-    }];
-    readonly stateMutability: "view";
-}, {
-    readonly type: "function";
-    readonly name: "VOTING_ASSET_WITH_SLOT_TYPEHASH";
-    readonly inputs: readonly [];
-    readonly outputs: readonly [{
-        readonly name: "";
-        readonly type: "bytes32";
-        readonly internalType: "bytes32";
-    }];
-    readonly stateMutability: "view";
-}, {
-    readonly type: "function";
-    readonly name: "VOTING_STRATEGY";
-    readonly inputs: readonly [];
-    readonly outputs: readonly [{
-        readonly name: "";
-        readonly type: "address";
-        readonly internalType: "contract IVotingStrategy";
     }];
     readonly stateMutability: "view";
 }, {
@@ -108,6 +48,57 @@ declare const IVotingMachineWithProofs_ABI: readonly [{
     }];
     readonly outputs: readonly [];
     readonly stateMutability: "nonpayable";
+}, {
+    readonly type: "function";
+    readonly name: "createVote";
+    readonly inputs: readonly [{
+        readonly name: "proposalId";
+        readonly type: "uint256";
+        readonly internalType: "uint256";
+    }];
+    readonly outputs: readonly [{
+        readonly name: "";
+        readonly type: "uint256";
+        readonly internalType: "uint256";
+    }];
+    readonly stateMutability: "nonpayable";
+}, {
+    readonly type: "function";
+    readonly name: "getBridgedVoteInfo";
+    readonly inputs: readonly [{
+        readonly name: "proposalId";
+        readonly type: "uint256";
+        readonly internalType: "uint256";
+    }, {
+        readonly name: "voter";
+        readonly type: "address";
+        readonly internalType: "address";
+    }];
+    readonly outputs: readonly [{
+        readonly name: "";
+        readonly type: "tuple";
+        readonly internalType: "struct IVotingMachineWithProofs.BridgedVote";
+        readonly components: readonly [{
+            readonly name: "support";
+            readonly type: "bool";
+            readonly internalType: "bool";
+        }, {
+            readonly name: "votingTokens";
+            readonly type: "address[]";
+            readonly internalType: "address[]";
+        }];
+    }];
+    readonly stateMutability: "view";
+}, {
+    readonly type: "function";
+    readonly name: "getDataWarehouse";
+    readonly inputs: readonly [];
+    readonly outputs: readonly [{
+        readonly name: "";
+        readonly type: "address";
+        readonly internalType: "contract IDataWarehouse";
+    }];
+    readonly stateMutability: "view";
 }, {
     readonly type: "function";
     readonly name: "getProposalById";
@@ -125,9 +116,17 @@ declare const IVotingMachineWithProofs_ABI: readonly [{
             readonly type: "uint256";
             readonly internalType: "uint256";
         }, {
+            readonly name: "strategy";
+            readonly type: "address";
+            readonly internalType: "contract IVotingStrategy";
+        }, {
             readonly name: "sentToGovernance";
             readonly type: "bool";
             readonly internalType: "bool";
+        }, {
+            readonly name: "l1BlockHash";
+            readonly type: "bytes32";
+            readonly internalType: "bytes32";
         }, {
             readonly name: "startTime";
             readonly type: "uint40";
@@ -243,17 +242,64 @@ declare const IVotingMachineWithProofs_ABI: readonly [{
     readonly stateMutability: "view";
 }, {
     readonly type: "function";
-    readonly name: "startProposalVote";
+    readonly name: "getVotingStrategy";
+    readonly inputs: readonly [];
+    readonly outputs: readonly [{
+        readonly name: "";
+        readonly type: "address";
+        readonly internalType: "contract IVotingStrategy";
+    }];
+    readonly stateMutability: "view";
+}, {
+    readonly type: "function";
+    readonly name: "setDataWarehouse";
+    readonly inputs: readonly [{
+        readonly name: "newDataWarehouse";
+        readonly type: "address";
+        readonly internalType: "contract IDataWarehouse";
+    }];
+    readonly outputs: readonly [];
+    readonly stateMutability: "nonpayable";
+}, {
+    readonly type: "function";
+    readonly name: "setVotingStrategy";
+    readonly inputs: readonly [{
+        readonly name: "newVotingStrategy";
+        readonly type: "address";
+        readonly internalType: "contract IVotingStrategy";
+    }];
+    readonly outputs: readonly [];
+    readonly stateMutability: "nonpayable";
+}, {
+    readonly type: "function";
+    readonly name: "settleVoteFromPortal";
     readonly inputs: readonly [{
         readonly name: "proposalId";
         readonly type: "uint256";
         readonly internalType: "uint256";
+    }, {
+        readonly name: "voter";
+        readonly type: "address";
+        readonly internalType: "address";
+    }, {
+        readonly name: "votingBalanceProofs";
+        readonly type: "tuple[]";
+        readonly internalType: "struct IVotingMachineWithProofs.VotingBalanceProof[]";
+        readonly components: readonly [{
+            readonly name: "underlyingAsset";
+            readonly type: "address";
+            readonly internalType: "address";
+        }, {
+            readonly name: "slot";
+            readonly type: "uint128";
+            readonly internalType: "uint128";
+        }, {
+            readonly name: "proof";
+            readonly type: "bytes";
+            readonly internalType: "bytes";
+        }];
     }];
-    readonly outputs: readonly [{
-        readonly name: "";
-        readonly type: "uint256";
-        readonly internalType: "uint256";
-    }];
+    readonly outputs: readonly [];
     readonly stateMutability: "nonpayable";
 }, {
     readonly type: "function";
@@ -288,114 +334,11 @@ declare const IVotingMachineWithProofs_ABI: readonly [{
     readonly stateMutability: "nonpayable";
 }, {
     readonly type: "function";
-    readonly name: "submitVoteAsRepresentative";
-    readonly inputs: readonly [{
-        readonly name: "proposalId";
-        readonly type: "uint256";
-        readonly internalType: "uint256";
-    }, {
-        readonly name: "support";
-        readonly type: "bool";
-        readonly internalType: "bool";
-    }, {
-        readonly name: "voter";
-        readonly type: "address";
-        readonly internalType: "address";
-    }, {
-        readonly name: "proofOfRepresentation";
-        readonly type: "bytes";
-        readonly internalType: "bytes";
-    }, {
-        readonly name: "votingBalanceProofs";
-        readonly type: "tuple[]";
-        readonly internalType: "struct IVotingMachineWithProofs.VotingBalanceProof[]";
-        readonly components: readonly [{
-            readonly name: "underlyingAsset";
-            readonly type: "address";
-            readonly internalType: "address";
-        }, {
-            readonly name: "slot";
-            readonly type: "uint128";
-            readonly internalType: "uint128";
-        }, {
-            readonly name: "proof";
-            readonly type: "bytes";
-            readonly internalType: "bytes";
-        }];
-    }];
-    readonly outputs: readonly [];
-    readonly stateMutability: "nonpayable";
-}, {
-    readonly type: "function";
-    readonly name: "submitVoteAsRepresentativeBySignature";
-    readonly inputs: readonly [{
-        readonly name: "proposalId";
-        readonly type: "uint256";
-        readonly internalType: "uint256";
-    }, {
-        readonly name: "voter";
-        readonly type: "address";
-        readonly internalType: "address";
-    }, {
-        readonly name: "representative";
-        readonly type: "address";
-        readonly internalType: "address";
-    }, {
-        readonly name: "support";
-        readonly type: "bool";
-        readonly internalType: "bool";
-    }, {
-        readonly name: "proofOfRepresentation";
-        readonly type: "bytes";
-        readonly internalType: "bytes";
-    }, {
-        readonly name: "votingBalanceProofs";
-        readonly type: "tuple[]";
-        readonly internalType: "struct IVotingMachineWithProofs.VotingBalanceProof[]";
-        readonly components: readonly [{
-            readonly name: "underlyingAsset";
-            readonly type: "address";
-            readonly internalType: "address";
-        }, {
-            readonly name: "slot";
-            readonly type: "uint128";
-            readonly internalType: "uint128";
-        }, {
-            readonly name: "proof";
-            readonly type: "bytes";
-            readonly internalType: "bytes";
-        }];
-    }, {
-        readonly name: "signatureParams";
-        readonly type: "tuple";
-        readonly internalType: "struct IVotingMachineWithProofs.SignatureParams";
-        readonly components: readonly [{
-            readonly name: "v";
-            readonly type: "uint8";
-            readonly internalType: "uint8";
-        }, {
-            readonly name: "r";
-            readonly type: "bytes32";
-            readonly internalType: "bytes32";
-        }, {
-            readonly name: "s";
-            readonly type: "bytes32";
-            readonly internalType: "bytes32";
-        }];
-    }];
-    readonly outputs: readonly [];
-    readonly stateMutability: "nonpayable";
-}, {
-    readonly type: "function";
     readonly name: "submitVoteBySignature";
     readonly inputs: readonly [{
         readonly name: "proposalId";
         readonly type: "uint256";
         readonly internalType: "uint256";
-    }, {
-        readonly name: "voter";
-        readonly type: "address";
-        readonly internalType: "address";
     }, {
         readonly name: "support";
         readonly type: "bool";
@@ -432,6 +375,16 @@ declare const IVotingMachineWithProofs_ABI: readonly [{
     }];
     readonly outputs: readonly [];
     readonly stateMutability: "nonpayable";
+}, {
+    readonly type: "event";
+    readonly name: "DataWarehouseUpdated";
+    readonly inputs: readonly [{
+        readonly name: "newDataWarehouse";
+        readonly type: "address";
+        readonly indexed: true;
+        readonly internalType: "address";
+    }];
+    readonly anonymous: false;
 }, {
     readonly type: "event";
     readonly name: "ProposalResultsSent";
@@ -479,7 +432,7 @@ declare const IVotingMachineWithProofs_ABI: readonly [{
     readonly anonymous: false;
 }, {
     readonly type: "event";
-    readonly name: "ProposalVoteStarted";
+    readonly name: "ProposalVoteCreated";
     readonly inputs: readonly [{
         readonly name: "proposalId";
         readonly type: "uint256";
@@ -500,6 +453,36 @@ declare const IVotingMachineWithProofs_ABI: readonly [{
         readonly type: "uint256";
         readonly indexed: false;
         readonly internalType: "uint256";
+    }, {
+        readonly name: "strategy";
+        readonly type: "address";
+        readonly indexed: false;
+        readonly internalType: "address";
+    }];
+    readonly anonymous: false;
+}, {
+    readonly type: "event";
+    readonly name: "VoteBridged";
+    readonly inputs: readonly [{
+        readonly name: "proposalId";
+        readonly type: "uint256";
+        readonly indexed: true;
+        readonly internalType: "uint256";
+    }, {
+        readonly name: "voter";
+        readonly type: "address";
+        readonly indexed: true;
+        readonly internalType: "address";
+    }, {
+        readonly name: "support";
+        readonly type: "bool";
+        readonly indexed: true;
+        readonly internalType: "bool";
+    }, {
+        readonly name: "votingTokens";
+        readonly type: "address[]";
+        readonly indexed: false;
+        readonly internalType: "address[]";
     }];
     readonly anonymous: false;
 }, {
@@ -525,6 +508,16 @@ declare const IVotingMachineWithProofs_ABI: readonly [{
         readonly type: "uint256";
         readonly indexed: false;
         readonly internalType: "uint256";
+    }];
+    readonly anonymous: false;
+}, {
+    readonly type: "event";
+    readonly name: "VotingStrategyUpdated";
+    readonly inputs: readonly [{
+        readonly name: "newVotingStrategy";
+        readonly type: "address";
+        readonly indexed: true;
+        readonly internalType: "address";
     }];
     readonly anonymous: false;
 }];

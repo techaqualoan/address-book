@@ -715,18 +715,9 @@ declare const IGovernanceCore_ABI: readonly [{
         readonly internalType: "bool";
     }, {
         readonly name: "votingAssetsWithSlot";
-        readonly type: "tuple[]";
+        readonly type: "address[]";
         readonly indexed: false;
-        readonly internalType: "struct IVotingMachineWithProofs.VotingAssetWithSlot[]";
-        readonly components: readonly [{
-            readonly name: "underlyingAsset";
-            readonly type: "address";
-            readonly internalType: "address";
-        }, {
-            readonly name: "slot";
-            readonly type: "uint128";
-            readonly internalType: "uint128";
-        }];
+        readonly internalType: "address[]";
     }];
     readonly anonymous: false;
 }, {

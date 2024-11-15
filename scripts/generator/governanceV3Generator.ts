@@ -46,7 +46,7 @@ async function getVotingStrategyAndWarehouse(votingMachine: Address, client: Cli
     client,
   });
 
-  const votingStrategy = await votingMachineContract.read.VOTING_STRATEGY();
+  const votingStrategy = await votingMachineContract.read.getVotingStrategy();
   const votingStrategyContract = getContract({
     address: votingStrategy,
     abi: IVotingStrategy_ABI,

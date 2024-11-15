@@ -30,6 +30,8 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/ts/AddressBook.ts
 var AddressBook_exports = {};
 __export(AddressBook_exports, {
+  GovernanceV3BNB: () => GovernanceV3BNB,
+  GovernanceV3Sepolia: () => GovernanceV3Sepolia,
   MiscBNB: () => MiscBNB,
   MiscSepolia: () => MiscSepolia,
   ProtocolSafetyModule: () => ProtocolSafetyModule,
@@ -38,6 +40,8 @@ __export(AddressBook_exports, {
   ProtocolV3Sepolia: () => ProtocolV3Sepolia
 });
 module.exports = __toCommonJS(AddressBook_exports);
+var GovernanceV3Sepolia = __toESM(require("./GovernanceV3Sepolia.js"));
+var GovernanceV3BNB = __toESM(require("./GovernanceV3BNB.js"));
 var ProtocolV3Sepolia = __toESM(require("./ProtocolV3Sepolia.js"));
 var ProtocolV3BNB = __toESM(require("./ProtocolV3BNB.js"));
 var MiscBNB = __toESM(require("./MiscBNB.js"));
@@ -46,6 +50,8 @@ var ProtocolSafetyModule = __toESM(require("./ProtocolSafetyModule.js"));
 var ProtocolSafetyModuleSepolia = __toESM(require("./ProtocolSafetyModuleSepolia.js"));
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  GovernanceV3BNB,
+  GovernanceV3Sepolia,
   MiscBNB,
   MiscSepolia,
   ProtocolSafetyModule,

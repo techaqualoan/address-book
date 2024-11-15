@@ -226,7 +226,7 @@ interface IGovernanceCore {
     uint256 indexed proposalId,
     address indexed voter,
     bool indexed support,
-    IVotingMachineWithProofs.VotingAssetWithSlot[] votingAssetsWithSlot
+    address[] votingAssetsWithSlot
   );
 
   /**
