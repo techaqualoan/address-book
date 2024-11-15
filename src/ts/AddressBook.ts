@@ -4,3 +4,4 @@ export * as ProtocolV3BNB from './ProtocolV3BNB';
 export * as MiscBNB from './MiscBNB';
 export * as MiscSepolia from './MiscSepolia';
 export * as ProtocolSafetyModule from './ProtocolSafetyModule';
+export * as ProtocolSafetyModuleSepolia from './ProtocolSafetyModuleSepolia';

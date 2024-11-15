@@ -17,18 +17,18 @@ var __copyProps = (to, from, except, desc) => {
 };
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// src/ts/ProtocolSafetyModule.ts
-var ProtocolSafetyModule_exports = {};
-__export(ProtocolSafetyModule_exports, {
+// src/ts/ProtocolSafetyModuleSepolia.ts
+var ProtocolSafetyModuleSepolia_exports = {};
+__export(ProtocolSafetyModuleSepolia_exports, {
   CHAIN_ID: () => CHAIN_ID,
   STK_AAVE: () => STK_AAVE
 });
-module.exports = __toCommonJS(ProtocolSafetyModule_exports);
-var STK_AAVE = "0x4da27a545c0c5B758a6BA100e3a049001de870f5";
-var CHAIN_ID = 1;
+module.exports = __toCommonJS(ProtocolSafetyModuleSepolia_exports);
+var STK_AAVE = "0x234753D2Cc86a6Ee8d895caEA93A89c048d987Eb";
+var CHAIN_ID = 11155111;
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   CHAIN_ID,
   STK_AAVE
 });
-//# sourceMappingURL=ProtocolSafetyModule.js.map
+//# sourceMappingURL=ProtocolSafetyModuleSepolia.js.map

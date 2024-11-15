@@ -7,3 +7,4 @@ import {ProtocolV3BNB} from './ProtocolV3BNB.sol';
 import {MiscBNB} from './MiscBNB.sol';
 import {MiscSepolia} from './MiscSepolia.sol';
 import {ProtocolSafetyModule} from './ProtocolSafetyModule.sol';
+import {ProtocolSafetyModuleSepolia} from './ProtocolSafetyModuleSepolia.sol';
