@@ -16,7 +16,6 @@ const CHAIN_ID_API_KEY_MAP = {
   [ChainId.bnb]: process.env.ETHERSCAN_API_KEY_BNB,
   [ChainId.base]: process.env.ETHERSCAN_API_KEY_BASE,
   [ChainId.base_sepolia]: process.env.ETHERSCAN_API_KEY_BASE,
-  [ChainId.zkSync]: process.env.ETHERSCAN_API_KEY_ZKSYNC,
   [ChainId.gnosis]: process.env.ETHERSCAN_API_KEY_GNOSIS,
 };
 
