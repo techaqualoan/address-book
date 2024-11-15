@@ -5,7 +5,7 @@ import {bnbProtoV3} from './configs/pools/bnb';
 import {generateGovernanceLibrary} from './generator/governanceV3Generator';
 import {generateProtocolV3Library} from './generator/protocolV3Generator';
 import {prefixWithGeneratedWarning, prefixWithPragma} from './generator/utils';
-import {generateSafetyModule} from './generator/safetyModuleGenerator';
+import {generateSafetyModuleAddresses, sepoliaAddressesSafetyModule, bnbAddressesSafetyModule} from './generator/safetyModuleGenerator';
 import {generateABIImports} from './generator/abis';
 import {governanceConfigBNB} from './configs/governance/bnb';
 import {governanceConfigSepolia} from './configs/governance/ethereum';
@@ -48,7 +48,10 @@ async function main() {
     sepoliaAddresses,
   ].map((addresses) => generateNetworkAddresses(addresses));
 
-  const smImports = generateSafetyModule();
+  const smAddresses = [
+    bnbAddressesSafetyModule,
+    sepoliaAddressesSafetyModule,
+  ].map((addresses) => generateSafetyModuleAddresses(addresses))
 
   const abis = generateABIImports();
 
@@ -58,7 +61,7 @@ async function main() {
     governanceNames,
     v3LibraryNames,
     networkAddresses,
-    smImports,
+    smAddresses,
     tokenListImports,
   ].flat();
 

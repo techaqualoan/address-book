@@ -34,7 +34,7 @@ __export(AddressBook_exports, {
   GovernanceV3Sepolia: () => GovernanceV3Sepolia,
   MiscBNB: () => MiscBNB,
   MiscSepolia: () => MiscSepolia,
-  ProtocolSafetyModule: () => ProtocolSafetyModule,
+  ProtocolSafetyModuleBNB: () => ProtocolSafetyModuleBNB,
   ProtocolSafetyModuleSepolia: () => ProtocolSafetyModuleSepolia,
   ProtocolV3BNB: () => ProtocolV3BNB,
   ProtocolV3Sepolia: () => ProtocolV3Sepolia
@@ -46,7 +46,7 @@ var ProtocolV3Sepolia = __toESM(require("./ProtocolV3Sepolia.js"));
 var ProtocolV3BNB = __toESM(require("./ProtocolV3BNB.js"));
 var MiscBNB = __toESM(require("./MiscBNB.js"));
 var MiscSepolia = __toESM(require("./MiscSepolia.js"));
-var ProtocolSafetyModule = __toESM(require("./ProtocolSafetyModule.js"));
+var ProtocolSafetyModuleBNB = __toESM(require("./ProtocolSafetyModuleBNB.js"));
 var ProtocolSafetyModuleSepolia = __toESM(require("./ProtocolSafetyModuleSepolia.js"));
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
@@ -54,7 +54,7 @@ var ProtocolSafetyModuleSepolia = __toESM(require("./ProtocolSafetyModuleSepolia
   GovernanceV3Sepolia,
   MiscBNB,
   MiscSepolia,
-  ProtocolSafetyModule,
+  ProtocolSafetyModuleBNB,
   ProtocolSafetyModuleSepolia,
   ProtocolV3BNB,
   ProtocolV3Sepolia

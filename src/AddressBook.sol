@@ -8,5 +8,5 @@ import {ProtocolV3Sepolia} from './ProtocolV3Sepolia.sol';
 import {ProtocolV3BNB} from './ProtocolV3BNB.sol';
 import {MiscBNB} from './MiscBNB.sol';
 import {MiscSepolia} from './MiscSepolia.sol';
-import {ProtocolSafetyModule} from './ProtocolSafetyModule.sol';
+import {ProtocolSafetyModuleBNB} from './ProtocolSafetyModuleBNB.sol';
 import {ProtocolSafetyModuleSepolia} from './ProtocolSafetyModuleSepolia.sol';

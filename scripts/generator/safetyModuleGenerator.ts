@@ -8,65 +8,45 @@ import {
 } from './utils';
 import { ChainId } from '@bgd-labs/rpc-env';
 
-export const SAFETY_MODULE_ADDRESSES = {
-  [ChainId.mainnet]: {
+export const bnbAddressesSafetyModule = {
+  name: 'BNB',
+  chainId: ChainId.bnb,
+  addresses: {
     STK_AAVE: '0x4da27a545c0c5B758a6BA100e3a049001de870f5',
   },
-  [ChainId.sepolia]: {
+};
+
+export const sepoliaAddressesSafetyModule = {
+  name: 'Sepolia',
+  chainId: ChainId.sepolia,
+  addresses: {
     STK_AAVE: '0x234753D2Cc86a6Ee8d895caEA93A89c048d987Eb',
   },
-} as const;
+};
 
-export function generateSafetyModule() {
-  const chains = [
-    {
-      chainId: ChainId.mainnet,
-      nameSuffix: '',
-      addresses: SAFETY_MODULE_ADDRESSES[ChainId.mainnet],
-    },
-    {
-      chainId: ChainId.sepolia,
-      nameSuffix: 'Sepolia',
-      addresses: SAFETY_MODULE_ADDRESSES[ChainId.sepolia],
-    },
-  ];
+export function generateSafetyModuleAddresses(config: any) {
+  const name = `ProtocolSafetyModule${config.name}`;
 
-  const results = {
-    js: [] as string[],
-    solidity: [] as string[],
+  let solidityLibrary = wrapIntoSolidityLibrary(
+    generateSolidityConstants({chainId: config.chainId, addresses: config.addresses}),
+    name,
+  );
+
+  fs.writeFileSync(
+    `./src/${name}.sol`,
+    prefixWithGeneratedWarning(prefixWithPragma(solidityLibrary)),
+  );
+  fs.writeFileSync(
+    `./src/ts/${name}.ts`,
+    prefixWithGeneratedWarning(
+      generateJsConstants({
+        chainId: config.chainId,
+        addresses: {...config.addresses, CHAIN_ID: {value: config.chainId, type: 'uint256'}},
+      }).join('\n'),
+    ),
+  );
+  return {
+    js: [`export * as ${name} from './${name}';`],
+    solidity: [`import {${name}} from './${name}.sol';`],
   };
-
-  chains.forEach(({ chainId, nameSuffix, addresses }) => {
-    const name = `ProtocolSafetyModule${nameSuffix}`;
-
-    fs.writeFileSync(
-      `./src/${name}.sol`,
-      prefixWithGeneratedWarning(
-        prefixWithPragma(
-          wrapIntoSolidityLibrary(
-            generateSolidityConstants({ chainId, addresses }),
-            name,
-          ),
-        ),
-      ),
-    );
-
-    fs.writeFileSync(
-      `./src/ts/${name}.ts`,
-      prefixWithGeneratedWarning(
-        generateJsConstants({
-          chainId,
-          addresses: {
-            ...addresses,
-            CHAIN_ID: { value: chainId, type: 'uint256' },
-          },
-        }).join('\n'),
-      ),
-    );
-
-    results.js.push(`export * as ${name} from './${name}';`);
-    results.solidity.push(`import {${name}} from './${name}.sol';`);
-  });
-
-  return results;
 }
