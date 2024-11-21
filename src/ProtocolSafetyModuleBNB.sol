@@ -3,6 +3,6 @@
 pragma solidity >=0.6.0;
 
 library ProtocolSafetyModuleBNB {
-  // https://bscscan.com/address/0x4da27a545c0c5B758a6BA100e3a049001de870f5
-  address internal constant STK_AAVE = 0x4da27a545c0c5B758a6BA100e3a049001de870f5;
+  // https://bscscan.com/address/0x5F281bdaD2E6d4af7354054f48609273e874366f
+  address internal constant STK_AAVE = 0x5F281bdaD2E6d4af7354054f48609273e874366f;
 }

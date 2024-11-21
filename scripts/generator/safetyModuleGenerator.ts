@@ -12,7 +12,7 @@ export const bnbAddressesSafetyModule = {
   name: 'BNB',
   chainId: ChainId.bnb,
   addresses: {
-    STK_AAVE: '0x4da27a545c0c5B758a6BA100e3a049001de870f5',
+    STK_AAVE: '0x5F281bdaD2E6d4af7354054f48609273e874366f',
   },
 };
 
