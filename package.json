@@ -78,7 +78,7 @@
   },
   "homepage": "https://github.com/techaqualoan/address-book#readme",
   "devDependencies": {
-    "@bgd-labs/rpc-env": "^1.0.3",
+    "@bgd-labs/rpc-env": "^2.1.2",
     "@bgd-labs/react-web3-icons": "^1.5.3",
     "@types/node": "^22.4.1",
     "@uniswap/token-lists": "^1.0.0-beta.33",
