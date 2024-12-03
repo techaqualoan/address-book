@@ -1,6 +1,6 @@
 {
   "name": "@techaqualoan/address-book",
-  "version": "4.2.1",
+  "version": "1.0.0",
   "description": "This repository contains an up-to-date registry of all addresses of the ecosystem's smart contracts, for its usage in Solidity codebases.",
   "private": false,
   "files": [
