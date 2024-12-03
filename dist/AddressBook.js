@@ -31,32 +31,41 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 var AddressBook_exports = {};
 __export(AddressBook_exports, {
   GovernanceV3BNB: () => GovernanceV3BNB,
+  GovernanceV3Ethereum: () => GovernanceV3Ethereum,
   GovernanceV3Sepolia: () => GovernanceV3Sepolia,
   MiscBNB: () => MiscBNB,
+  MiscEthereum: () => MiscEthereum,
   MiscSepolia: () => MiscSepolia,
   ProtocolSafetyModuleBNB: () => ProtocolSafetyModuleBNB,
   ProtocolSafetyModuleSepolia: () => ProtocolSafetyModuleSepolia,
   ProtocolV3BNB: () => ProtocolV3BNB,
+  ProtocolV3Ethereum: () => ProtocolV3Ethereum,
   ProtocolV3Sepolia: () => ProtocolV3Sepolia
 });
 module.exports = __toCommonJS(AddressBook_exports);
 var GovernanceV3Sepolia = __toESM(require("./GovernanceV3Sepolia.js"));
 var GovernanceV3BNB = __toESM(require("./GovernanceV3BNB.js"));
+var GovernanceV3Ethereum = __toESM(require("./GovernanceV3Ethereum.js"));
 var ProtocolV3Sepolia = __toESM(require("./ProtocolV3Sepolia.js"));
 var ProtocolV3BNB = __toESM(require("./ProtocolV3BNB.js"));
+var ProtocolV3Ethereum = __toESM(require("./ProtocolV3Ethereum.js"));
 var MiscBNB = __toESM(require("./MiscBNB.js"));
 var MiscSepolia = __toESM(require("./MiscSepolia.js"));
+var MiscEthereum = __toESM(require("./MiscEthereum.js"));
 var ProtocolSafetyModuleBNB = __toESM(require("./ProtocolSafetyModuleBNB.js"));
 var ProtocolSafetyModuleSepolia = __toESM(require("./ProtocolSafetyModuleSepolia.js"));
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   GovernanceV3BNB,
+  GovernanceV3Ethereum,
   GovernanceV3Sepolia,
   MiscBNB,
+  MiscEthereum,
   MiscSepolia,
   ProtocolSafetyModuleBNB,
   ProtocolSafetyModuleSepolia,
   ProtocolV3BNB,
+  ProtocolV3Ethereum,
   ProtocolV3Sepolia
 });
 //# sourceMappingURL=AddressBook.js.map

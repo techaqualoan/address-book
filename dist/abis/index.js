@@ -54,6 +54,7 @@ __export(abis_exports, {
   IUiPoolDataProvider_ABI: () => import_IUiPoolDataProvider.IUiPoolDataProvider_ABI,
   IVotingMachineDataHelper_ABI: () => import_IVotingMachineDataHelper.IVotingMachineDataHelper_ABI,
   IVotingMachineWithProofs_ABI: () => import_IVotingMachineWithProofs.IVotingMachineWithProofs_ABI,
+  IVotingMachine_ABI: () => import_IVotingMachine.IVotingMachine_ABI,
   IVotingPortal_ABI: () => import_IVotingPortal.IVotingPortal_ABI,
   IVotingStrategy_ABI: () => import_IVotingStrategy.IVotingStrategy_ABI,
   IWithGuardian_ABI: () => import_IWithGuardian.IWithGuardian_ABI,
@@ -65,6 +66,7 @@ var import_IAaveV3ConfigEngine = require("./IAaveV3ConfigEngine.js");
 var import_AggregatorInterface = require("./AggregatorInterface.js");
 var import_IPayloadsControllerCore = require("./IPayloadsControllerCore.js");
 var import_IVotingMachineWithProofs = require("./IVotingMachineWithProofs.js");
+var import_IVotingMachine = require("./IVotingMachine.js");
 var import_IGovernanceCore = require("./IGovernanceCore.js");
 var import_IVotingStrategy = require("./IVotingStrategy.js");
 var import_IVotingPortal = require("./IVotingPortal.js");
@@ -134,6 +136,7 @@ var import_IATokenWithDelegation = require("./IATokenWithDelegation.js");
   IUiPoolDataProvider_ABI,
   IVotingMachineDataHelper_ABI,
   IVotingMachineWithProofs_ABI,
+  IVotingMachine_ABI,
   IVotingPortal_ABI,
   IVotingStrategy_ABI,
   IWithGuardian_ABI,

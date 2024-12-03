@@ -12,6 +12,7 @@ import {IGovernanceCore_ABI} from '../../src/ts/abis/IGovernanceCore';
 import {IPayloadsControllerCore_ABI} from '../../src/ts/abis/IPayloadsControllerCore';
 import {IVotingStrategy_ABI} from '../../src/ts/abis/IVotingStrategy';
 import {IVotingMachineWithProofs_ABI} from '../../src/ts/abis/IVotingMachineWithProofs';
+import {IVotingMachine_ABI} from '../../src/ts/abis/IVotingMachine';
 import {getClient} from '../clients';
 
 type ExecutorsV3 = {
@@ -40,13 +41,25 @@ async function fetchV3ExecutorAddresses(
 }
 
 async function getVotingStrategyAndWarehouse(votingMachine: Address, client: Client) {
-  const votingMachineContract = getContract({
-    address: votingMachine,
-    abi: IVotingMachineWithProofs_ABI,
-    client,
-  });
+  let votingStrategy;
+  let votingMachineContract;
 
-  const votingStrategy = await votingMachineContract.read.getVotingStrategy();
+  if (client.chain?.name == "Ethereum") {
+    votingMachineContract = getContract({
+      address: votingMachine,
+      abi: IVotingMachine_ABI,
+      client,
+    });
+    votingStrategy = await votingMachineContract.read.VOTING_STRATEGY();
+  } else {
+    votingMachineContract = getContract({
+      address: votingMachine,
+      abi: IVotingMachineWithProofs_ABI,
+      client,
+    });
+    votingStrategy = await votingMachineContract.read.getVotingStrategy();
+  }
+
   const votingStrategyContract = getContract({
     address: votingStrategy,
     abi: IVotingStrategy_ABI,

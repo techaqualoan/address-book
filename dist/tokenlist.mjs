@@ -338,10 +338,262 @@ var tokens = [
       underlying: "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
       underlyingAToken: "0x2ED671186a86eEF55E7573466a10Da684bA1ca63"
     }
+  },
+  {
+    chainId: 1,
+    address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+    name: "Dai Stablecoin",
+    decimals: 18,
+    symbol: "DAI",
+    tags: ["underlying"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/dai.svg"
+  },
+  {
+    chainId: 1,
+    address: "0x15DD569996679a766E6f96f97Bf2f94336f85906",
+    name: "Aqualoan Aq DAI",
+    decimals: 18,
+    symbol: "aAqDAI",
+    tags: ["aTokenV3", "aaveV3"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/adai.svg",
+    extensions: {
+      pool: "0x5aebD160b702fb4efbaDcedf55673a96366fa594",
+      underlying: "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+    }
+  },
+  {
+    chainId: 1,
+    address: "0xaf270C38fF895EA3f95Ed488CEACe2386F038249",
+    name: "Static Aave Ethereum DAI",
+    decimals: 18,
+    symbol: "stataEthDAI",
+    tags: ["aaveV3", "staticAT"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/statadai.svg",
+    extensions: {
+      pool: "0x5aebD160b702fb4efbaDcedf55673a96366fa594",
+      underlying: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      underlyingAToken: "0x15DD569996679a766E6f96f97Bf2f94336f85906"
+    }
+  },
+  {
+    chainId: 1,
+    address: "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+    name: "ChainLink Token",
+    decimals: 18,
+    symbol: "LINK",
+    tags: ["underlying"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/link.svg"
+  },
+  {
+    chainId: 1,
+    address: "0x4a6901617a028a29c421DE4a995b0147030DcA0c",
+    name: "Aqualoan Aq LINK",
+    decimals: 18,
+    symbol: "aAqLINK",
+    tags: ["aTokenV3", "aaveV3"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/alink.svg",
+    extensions: {
+      pool: "0x5aebD160b702fb4efbaDcedf55673a96366fa594",
+      underlying: "0x514910771AF9Ca656af840dff83E8264EcF986CA"
+    }
+  },
+  {
+    chainId: 1,
+    address: "0x57bd8C73838d1781b4f6E0d5Cf89eb676488d3df",
+    name: "Static Aave Ethereum LINK",
+    decimals: 18,
+    symbol: "stataEthLINK",
+    tags: ["aaveV3", "staticAT"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/statalink.svg",
+    extensions: {
+      pool: "0x5aebD160b702fb4efbaDcedf55673a96366fa594",
+      underlying: "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+      underlyingAToken: "0x4a6901617a028a29c421DE4a995b0147030DcA0c"
+    }
+  },
+  {
+    chainId: 1,
+    address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    name: "USD Coin",
+    decimals: 6,
+    symbol: "USDC",
+    tags: ["underlying"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/usdc.svg"
+  },
+  {
+    chainId: 1,
+    address: "0xBF559FF3ED3e6E669c288D76a914100695AF69F4",
+    name: "Aqualoan Aq USDC",
+    decimals: 6,
+    symbol: "aAqUSDC",
+    tags: ["aTokenV3", "aaveV3"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/ausdc.svg",
+    extensions: {
+      pool: "0x5aebD160b702fb4efbaDcedf55673a96366fa594",
+      underlying: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+    }
+  },
+  {
+    chainId: 1,
+    address: "0x73edDFa87C71ADdC275c2b9890f5c3a8480bC9E6",
+    name: "Static Aave Ethereum USDC",
+    decimals: 6,
+    symbol: "stataEthUSDC",
+    tags: ["aaveV3", "staticAT"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/statausdc.svg",
+    extensions: {
+      pool: "0x5aebD160b702fb4efbaDcedf55673a96366fa594",
+      underlying: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      underlyingAToken: "0xBF559FF3ED3e6E669c288D76a914100695AF69F4"
+    }
+  },
+  {
+    chainId: 1,
+    address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    name: "Wrapped BTC",
+    decimals: 8,
+    symbol: "WBTC",
+    tags: ["underlying"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/wbtc.svg"
+  },
+  {
+    chainId: 1,
+    address: "0xf0684fb9539D0268BdFc47050f24153921FD7ebb",
+    name: "Aqualoan Aq WBTC",
+    decimals: 8,
+    symbol: "aAqWBTC",
+    tags: ["aTokenV3", "aaveV3"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/awbtc.svg",
+    extensions: {
+      pool: "0x5aebD160b702fb4efbaDcedf55673a96366fa594",
+      underlying: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+    }
+  },
+  {
+    chainId: 1,
+    address: "0xB07E357cc262E92eee03D8B81464D596B258eA7a",
+    name: "Static Aave Ethereum WBTC",
+    decimals: 8,
+    symbol: "stataEthWBTC",
+    tags: ["aaveV3", "staticAT"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/statawbtc.svg",
+    extensions: {
+      pool: "0x5aebD160b702fb4efbaDcedf55673a96366fa594",
+      underlying: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      underlyingAToken: "0xf0684fb9539D0268BdFc47050f24153921FD7ebb"
+    }
+  },
+  {
+    chainId: 1,
+    address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    name: "Wrapped Ether",
+    decimals: 18,
+    symbol: "WETH",
+    tags: ["underlying"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/weth.svg"
+  },
+  {
+    chainId: 1,
+    address: "0x8C829396A0Adc89c17274c0AfC7dA705D7E4e1D9",
+    name: "Aqualoan Aq WETH",
+    decimals: 18,
+    symbol: "aAqWETH",
+    tags: ["aTokenV3", "aaveV3"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/aweth.svg",
+    extensions: {
+      pool: "0x5aebD160b702fb4efbaDcedf55673a96366fa594",
+      underlying: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    }
+  },
+  {
+    chainId: 1,
+    address: "0x252231882FB38481497f3C767469106297c8d93b",
+    name: "Static Aave Ethereum WETH",
+    decimals: 18,
+    symbol: "stataEthWETH",
+    tags: ["aaveV3", "staticAT"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/stataweth.svg",
+    extensions: {
+      pool: "0x5aebD160b702fb4efbaDcedf55673a96366fa594",
+      underlying: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      underlyingAToken: "0x8C829396A0Adc89c17274c0AfC7dA705D7E4e1D9"
+    }
+  },
+  {
+    chainId: 1,
+    address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+    name: "Tether USD",
+    decimals: 6,
+    symbol: "USDT",
+    tags: ["underlying"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/usdt.svg"
+  },
+  {
+    chainId: 1,
+    address: "0xBE4399DaB4fF2E7B2eBE50a45CC330FF4Bc95f64",
+    name: "Aqualoan Aq USDT",
+    decimals: 6,
+    symbol: "aAqUSDT",
+    tags: ["aTokenV3", "aaveV3"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/ausdt.svg",
+    extensions: {
+      pool: "0x5aebD160b702fb4efbaDcedf55673a96366fa594",
+      underlying: "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+    }
+  },
+  {
+    chainId: 1,
+    address: "0x862c57d48becB45583AEbA3f489696D22466Ca1b",
+    name: "Static Aave Ethereum USDT",
+    decimals: 6,
+    symbol: "stataEthUSDT",
+    tags: ["aaveV3", "staticAT"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/statausdt.svg",
+    extensions: {
+      pool: "0x5aebD160b702fb4efbaDcedf55673a96366fa594",
+      underlying: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      underlyingAToken: "0xBE4399DaB4fF2E7B2eBE50a45CC330FF4Bc95f64"
+    }
+  },
+  {
+    chainId: 1,
+    address: "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
+    name: "Aave Token",
+    decimals: 18,
+    symbol: "AAVE",
+    tags: ["underlying"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/aave.svg"
+  },
+  {
+    chainId: 1,
+    address: "0x0e4dD12D36dBc5A251057AdB7bBC3a6C44d36a3a",
+    name: "Aqualoan Aq AAVE",
+    decimals: 18,
+    symbol: "aAqAAVE",
+    tags: ["aTokenV3", "aaveV3"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/aaave.svg",
+    extensions: {
+      pool: "0x5aebD160b702fb4efbaDcedf55673a96366fa594",
+      underlying: "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9"
+    }
+  },
+  {
+    chainId: 1,
+    address: "0xFEB859A50f92C6D5ad7C9eF7C2c060D164B3280f",
+    name: "Static Aave Ethereum AAVE",
+    decimals: 18,
+    symbol: "stataEthAAVE",
+    tags: ["aaveV3", "staticAT"],
+    logoURI: "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/stataaave.svg",
+    extensions: {
+      pool: "0x5aebD160b702fb4efbaDcedf55673a96366fa594",
+      underlying: "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
+      underlyingAToken: "0x0e4dD12D36dBc5A251057AdB7bBC3a6C44d36a3a"
+    }
   }
 ];
-var version = { major: 3, minor: 0, patch: 60 };
-var timestamp = "2024-11-07T13:17:17.555Z";
+var version = { major: 3, minor: 0, patch: 63 };
+var timestamp = "2024-12-03T12:23:00.175Z";
 var tokenlist_default = {
   name,
   logoURI,

@@ -72,12 +72,15 @@ library ProtocolV3BNB {
   address internal constant POOL_ADDRESSES_PROVIDER_REGISTRY =
     0x117684358D990E42Eb1649E7e8C4691951dc1E71;
 
-  // https://bscscan.com/address/0x5598BbFA2f4fE8151f45bBA0a3edE1b54B51a0a9
+  // https://bscscan.com/address/0xe7f3aC8A56FA20303820a54bC46C8ce6ae7aF9f8
   address internal constant REPAY_WITH_COLLATERAL_ADAPTER =
-    0x5598BbFA2f4fE8151f45bBA0a3edE1b54B51a0a9;
+    0xe7f3aC8A56FA20303820a54bC46C8ce6ae7aF9f8;
 
-  // https://bscscan.com/address/0x33E0b3fc976DC9C516926BA48CfC0A9E10a2aAA5
-  address internal constant SWAP_COLLATERAL_ADAPTER = 0x33E0b3fc976DC9C516926BA48CfC0A9E10a2aAA5;
+  // https://bscscan.com/address/0x321510f3BaeD4D6D30726d3C463Fc2746c7cB9A8
+  address internal constant SWAP_COLLATERAL_ADAPTER = 0x321510f3BaeD4D6D30726d3C463Fc2746c7cB9A8;
+
+  // https://bscscan.com/address/0x78Dff54DB07Cd25Acd79Ff04e3c38Fc1B84900f8
+  address internal constant WITHDRAW_SWAP_ADAPTER = 0x78Dff54DB07Cd25Acd79Ff04e3c38Fc1B84900f8;
 
   // https://bscscan.com/address/0x2E15627381392816b5B55Ac64dE77746bD558479
   address internal constant UI_INCENTIVE_DATA_PROVIDER = 0x2E15627381392816b5B55Ac64dE77746bD558479;
@@ -90,9 +93,6 @@ library ProtocolV3BNB {
 
   // https://bscscan.com/address/0x33620e485Bb2278D9B25551bf078c2cEEE159c16
   address internal constant WETH_GATEWAY = 0x33620e485Bb2278D9B25551bf078c2cEEE159c16;
-
-  // https://bscscan.com/address/0x5E2d083417D12d4B0824E14Ecd48D26831F4Da7D
-  address internal constant WITHDRAW_SWAP_ADAPTER = 0x5E2d083417D12d4B0824E14Ecd48D26831F4Da7D;
 
   // https://bscscan.com/address/0x326aB0868bD279382Be2DF5E228Cb8AF38649AB4
   address internal constant STATIC_A_TOKEN_FACTORY = 0x326aB0868bD279382Be2DF5E228Cb8AF38649AB4;
@@ -144,8 +144,8 @@ library ProtocolV3BNBAssets {
   // https://bscscan.com/address/0x5b928122181D09Ec0fcA3868A449b73570c0F205
   address internal constant USDC_V_TOKEN = 0x5b928122181D09Ec0fcA3868A449b73570c0F205;
 
-  // https://bscscan.com/address/0x132d3C0B1D2cEa0BC552588063bdBb210FDeecfA
-  address internal constant USDC_ORACLE = 0x132d3C0B1D2cEa0BC552588063bdBb210FDeecfA;
+  // https://bscscan.com/address/0x51597f405303C4377E36123cBc172b13269EA163
+  address internal constant USDC_ORACLE = 0x51597f405303C4377E36123cBc172b13269EA163;
 
   // https://bscscan.com/address/0x7373b3472CAA3f465b908c8876de772374728C1E
   address internal constant USDC_INTEREST_RATE_STRATEGY =

@@ -4,6 +4,7 @@ import { IAaveV3ConfigEngine_ABI } from "./IAaveV3ConfigEngine.mjs";
 import { AggregatorInterface_ABI } from "./AggregatorInterface.mjs";
 import { IPayloadsControllerCore_ABI } from "./IPayloadsControllerCore.mjs";
 import { IVotingMachineWithProofs_ABI } from "./IVotingMachineWithProofs.mjs";
+import { IVotingMachine_ABI } from "./IVotingMachine.mjs";
 import { IGovernanceCore_ABI } from "./IGovernanceCore.mjs";
 import { IVotingStrategy_ABI } from "./IVotingStrategy.mjs";
 import { IVotingPortal_ABI } from "./IVotingPortal.mjs";
@@ -72,6 +73,7 @@ export {
   IUiPoolDataProvider_ABI,
   IVotingMachineDataHelper_ABI,
   IVotingMachineWithProofs_ABI,
+  IVotingMachine_ABI,
   IVotingPortal_ABI,
   IVotingStrategy_ABI,
   IWithGuardian_ABI,

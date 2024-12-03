@@ -1,8 +1,11 @@
 export { G as GovernanceV3Sepolia } from './GovernanceV3Sepolia-B5nBpeI7.mjs';
 export { G as GovernanceV3BNB } from './GovernanceV3BNB-CxGLJ0lw.mjs';
+export { G as GovernanceV3Ethereum } from './GovernanceV3Ethereum--W36OWI7.mjs';
 export { P as ProtocolV3Sepolia } from './ProtocolV3Sepolia-zweUmEMQ.mjs';
-export { P as ProtocolV3BNB } from './ProtocolV3BNB-BzmaMd4H.mjs';
+export { P as ProtocolV3BNB } from './ProtocolV3BNB-sDkV5DD3.mjs';
+export { P as ProtocolV3Ethereum } from './ProtocolV3Ethereum-BZkj7kj8.mjs';
 export { M as MiscBNB } from './MiscBNB-CuTOVJeP.mjs';
 export { M as MiscSepolia } from './MiscSepolia-B-WQF53I.mjs';
+export { M as MiscEthereum } from './MiscEthereum-ButbSCKB.mjs';
 export { P as ProtocolSafetyModuleBNB } from './ProtocolSafetyModuleBNB-g8rlg9Ms.mjs';
 export { P as ProtocolSafetyModuleSepolia } from './ProtocolSafetyModuleSepolia-4QSoz7G9.mjs';

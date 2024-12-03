@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import {appendFileSync, existsSync, mkdirSync, readdirSync, rmSync, writeFileSync} from 'fs';
-import { sepoliaProtoV3 } from './configs/pools/ethereum';
+import { sepoliaProtoV3, mainnetProtoV3Pool } from './configs/pools/ethereum';
 import {bnbProtoV3} from './configs/pools/bnb';
 import {generateGovernanceLibrary} from './generator/governanceV3Generator';
 import {generateProtocolV3Library} from './generator/protocolV3Generator';
@@ -8,9 +8,9 @@ import {prefixWithGeneratedWarning, prefixWithPragma} from './generator/utils';
 import {generateSafetyModuleAddresses, sepoliaAddressesSafetyModule, bnbAddressesSafetyModule} from './generator/safetyModuleGenerator';
 import {generateABIImports} from './generator/abis';
 import {governanceConfigBNB} from './configs/governance/bnb';
-import {governanceConfigSepolia} from './configs/governance/ethereum';
+import {governanceConfigMainnet, governanceConfigSepolia} from './configs/governance/ethereum';
 import {generateNetworkAddresses} from './generator/networkGenerator';
-import {sepoliaAddresses} from './configs/networks/ethereum';
+import {sepoliaAddresses, ethereumAddresses} from './configs/networks/ethereum';
 import {bnbAddresses} from './configs/networks/bnb';
 import {generateTokenList} from './generator/generateTokenList';
 
@@ -30,6 +30,7 @@ async function main() {
     [
       governanceConfigSepolia,
       governanceConfigBNB,
+      governanceConfigMainnet,
     ].map((config) => generateGovernanceLibrary(config)),
   );
 
@@ -37,6 +38,7 @@ async function main() {
     [
       sepoliaProtoV3,
       bnbProtoV3,
+      mainnetProtoV3Pool,
     ].map((config) => generateProtocolV3Library(config)),
   );
 
@@ -46,6 +48,7 @@ async function main() {
   const networkAddresses = [
     bnbAddresses,
     sepoliaAddresses,
+    ethereumAddresses,
   ].map((addresses) => generateNetworkAddresses(addresses));
 
   const smAddresses = [

@@ -11,6 +11,7 @@ export const ABI_INTERFACES = [
   'AggregatorInterface',
   'IPayloadsControllerCore',
   'IVotingMachineWithProofs',
+  'IVotingMachine',
   'IGovernanceCore',
   'IVotingStrategy',
   'IVotingPortal',

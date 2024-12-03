@@ -3,6 +3,7 @@ export { IAaveV3ConfigEngine_ABI } from './IAaveV3ConfigEngine.js';
 export { AggregatorInterface_ABI } from './AggregatorInterface.js';
 export { IPayloadsControllerCore_ABI } from './IPayloadsControllerCore.js';
 export { IVotingMachineWithProofs_ABI } from './IVotingMachineWithProofs.js';
+export { IVotingMachine_ABI } from './IVotingMachine.js';
 export { IGovernanceCore_ABI } from './IGovernanceCore.js';
 export { IVotingStrategy_ABI } from './IVotingStrategy.js';
 export { IVotingPortal_ABI } from './IVotingPortal.js';
