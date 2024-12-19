@@ -82,7 +82,7 @@
     },
     {
       "chainId": 56,
-      "address": "0x7FAB4CB5785aB5191d5e5E2C0DD20e57E8070D28",
+      "address": "0xBdDF93290Fa22898Ac9fD87858E94760Fb23242d",
       "name": "Aqualoan aq USDC",
       "decimals": 18,
       "symbol": "aaqUSDC",
@@ -104,7 +104,7 @@
       "extensions": {
         "pool": "0x751107834436ad0d08a4c6D9Cc82031D5088999C",
         "underlying": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
-        "underlyingAToken": "0x7FAB4CB5785aB5191d5e5E2C0DD20e57E8070D28"
+        "underlyingAToken": "0xBdDF93290Fa22898Ac9fD87858E94760Fb23242d"
       }
     },
     {
@@ -131,24 +131,22 @@
     },
     {
       "chainId": 56,
-      "address": "0x4DB5a66E937A9F4473fA95b1cAF1d1E1D62E29EA",
-      "name": "Wrapped Ether",
+      "address": "0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE",
+      "name": "XRP Token",
       "decimals": 18,
-      "symbol": "WETH",
-      "tags": ["underlying"],
-      "logoURI": "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/weth.svg"
+      "symbol": "XRP",
+      "tags": ["underlying"]
     },
     {
       "chainId": 56,
-      "address": "0xD044004F1b56fE4221FDD0A901419aaC6E4f5483",
-      "name": "Aqualoan aq WETH",
+      "address": "0xc37205b69d4367919973589dCED31555FfF03cb2",
+      "name": "Aqualoan Aq XRP",
       "decimals": 18,
-      "symbol": "aaqWETH",
+      "symbol": "aAqXRP",
       "tags": ["aTokenV3", "aaveV3"],
-      "logoURI": "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/aweth.svg",
       "extensions": {
         "pool": "0x751107834436ad0d08a4c6D9Cc82031D5088999C",
-        "underlying": "0x4DB5a66E937A9F4473fA95b1cAF1d1E1D62E29EA"
+        "underlying": "0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE"
       }
     },
     {
@@ -211,24 +209,22 @@
     },
     {
       "chainId": 56,
-      "address": "0x12f31B73D812C6Bb0d735a218c086d44D5fe5f89",
-      "name": "EURA (previously agEUR)",
-      "decimals": 18,
-      "symbol": "EURA",
-      "tags": ["underlying"],
-      "logoURI": "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/eura.svg"
+      "address": "0xbA2aE424d960c26247Dd6c32edC70B295c744C43",
+      "name": "Dogecoin",
+      "decimals": 8,
+      "symbol": "DOGE",
+      "tags": ["underlying"]
     },
     {
       "chainId": 56,
-      "address": "0x98Bfbb2cC39b6F3A18cB3597EE89FC3Ed6B120B7",
-      "name": "Aqualoan Aq EURS",
-      "decimals": 18,
-      "symbol": "aAqEURS",
+      "address": "0x4aA9B6f2eAB5015d55Ff5556E389f5a0407C1835",
+      "name": "Aqualoan Aq DOGE",
+      "decimals": 8,
+      "symbol": "aAqDOGE",
       "tags": ["aTokenV3", "aaveV3"],
-      "logoURI": "https://raw.githubusercontent.com/bgd-labs/web3-icons/main/icons/full/aeura.svg",
       "extensions": {
         "pool": "0x751107834436ad0d08a4c6D9Cc82031D5088999C",
-        "underlying": "0x12f31B73D812C6Bb0d735a218c086d44D5fe5f89"
+        "underlying": "0xbA2aE424d960c26247Dd6c32edC70B295c744C43"
       }
     },
     {
@@ -530,7 +526,7 @@
     },
     {
       "chainId": 1,
-      "address": "0xBE4399DaB4fF2E7B2eBE50a45CC330FF4Bc95f64",
+      "address": "0x29F39eC40595733987d1F31D87d56Af2167e199A",
       "name": "Aqualoan Aq USDT",
       "decimals": 6,
       "symbol": "aAqUSDT",
@@ -552,7 +548,7 @@
       "extensions": {
         "pool": "0x5aebD160b702fb4efbaDcedf55673a96366fa594",
         "underlying": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-        "underlyingAToken": "0xBE4399DaB4fF2E7B2eBE50a45CC330FF4Bc95f64"
+        "underlyingAToken": "0x29F39eC40595733987d1F31D87d56Af2167e199A"
       }
     },
     {
@@ -590,8 +586,48 @@
         "underlying": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
         "underlyingAToken": "0x0e4dD12D36dBc5A251057AdB7bBC3a6C44d36a3a"
       }
+    },
+    {
+      "chainId": 1,
+      "address": "0x15700B564Ca08D9439C58cA5053166E8317aa138",
+      "name": "deUSD",
+      "decimals": 18,
+      "symbol": "deUSD",
+      "tags": ["underlying"]
+    },
+    {
+      "chainId": 1,
+      "address": "0x261D7d18e19a874e41109606D12dbB73Fc4fa925",
+      "name": "Aqualoan Aq DEUSD",
+      "decimals": 18,
+      "symbol": "aAqDEUSD",
+      "tags": ["aTokenV3", "aaveV3"],
+      "extensions": {
+        "pool": "0x5aebD160b702fb4efbaDcedf55673a96366fa594",
+        "underlying": "0x15700B564Ca08D9439C58cA5053166E8317aa138"
+      }
+    },
+    {
+      "chainId": 1,
+      "address": "0xCE722f60F35C37aB295adc4E6bA45bCC7ca89Dd6",
+      "name": "JPEG’d",
+      "decimals": 18,
+      "symbol": "JPGD",
+      "tags": ["underlying"]
+    },
+    {
+      "chainId": 1,
+      "address": "0x2Ee373c45f06ecD2f69D78b866A9e6FDE1076e2B",
+      "name": "Aqualoan Aq JPGD",
+      "decimals": 18,
+      "symbol": "aAqJPGD",
+      "tags": ["aTokenV3", "aaveV3"],
+      "extensions": {
+        "pool": "0x5aebD160b702fb4efbaDcedf55673a96366fa594",
+        "underlying": "0xCE722f60F35C37aB295adc4E6bA45bCC7ca89Dd6"
+      }
     }
   ],
-  "version": { "major": 3, "minor": 0, "patch": 63 },
-  "timestamp": "2024-12-03T12:23:00.175Z"
+  "version": { "major": 3, "minor": 0, "patch": 64 },
+  "timestamp": "2024-12-19T01:14:30.348Z"
 }
